@@ -10,27 +10,26 @@ while key != "q":
 	# Key inputs
 	key = getch(timeout=0.1)
 	if key == "d" and direction[0] == 0:
-		direction = (1, 0)
+		here
 	#
 	elif key == "a" and direction[0] == 0:
-		direction = (-1, 0)
+		here
 	#
 	elif key == "s" and direction[1] == 0:
-		direction = (0, 1)
+		here
 	#
 	elif key == "w" and direction[1] == 0:
-		direction = (0, -1)	
+		here
 	#
 	# Lengthen snake
 	add_element_to_snake(snake, direction)
 	# Check if bit itself
 	if snake[-1] in snake[0:-1]:
-		print("GAME OVER!") 
-		exit()
+		here
 	#
 	# Check for food
 	if (snake[-1] != food):
-		snake.pop(0) # No food, shorten snake
+		here
 	#
 	else:
 		# Food, don't shorten snake and increase score
